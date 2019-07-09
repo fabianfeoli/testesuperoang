@@ -1,3 +1,9 @@
-<p>
-  task-panel works!
-</p>
+<div class="card main">
+    <div class="carregando" *ngIf="!loaded">
+        <mat-spinner diameter="30" strokeWidth="10" *ngIf="!loaded"></mat-spinner>
+    </div>
+    <div class="card-header mainheader" >Tarefas por situação </div>
+    <div class="card-body">
+        <div id="chartdiv2"></div>
+    </div>
+</div>

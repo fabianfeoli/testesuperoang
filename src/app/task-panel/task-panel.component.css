@@ -1,0 +1,30 @@
+#chartdiv2 {
+    width: 100%;
+    height: 380px;
+}
+
+.rect {
+    font-size: 10px;
+}
+
+.main {
+    width: 70%;
+    border-width: 1px;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    height: 480px;
+    position: absolute;
+}
+
+.mainheader {
+    color: white;
+    border-radius: 8px;
+    height: 35px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding-top: 5px;
+    background-color: #007EDB;
+}
