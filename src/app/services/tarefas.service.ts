@@ -12,7 +12,7 @@ import { Tarefa } from '../models/tarefa';
 export class TarefasService {
   headerOptions : HttpHeaders;
 
-  serverUrl = "http://testesuperocs.herokuapp.com/api/";
+  serverUrl = "https://testesuperocs.herokuapp.com/api/";
 
   constructor(private http: HttpClient) {
    }
