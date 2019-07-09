@@ -80,7 +80,7 @@ export class FormTarefaComponent implements OnInit {
   }
 
   screen2Class() {
-    this.tarefa.id = this.thisForm.get('id').value;
+    //this.tarefa.id = this.thisForm.get('id').value;
     this.tarefa.tituloTarefa = this.thisForm.get('titulo').value;
     this.tarefa.dsTarefa = this.thisForm.get('descricao').value;
     this.tarefa.statusTarefa = this.thisForm.get('situacaoTarefa').value;
