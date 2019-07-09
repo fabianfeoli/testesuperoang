@@ -1,0 +1,55 @@
+.divhome {
+    height: 86vh;
+    width: 100%;
+}
+
+.sidenav {
+    margin: 1px;
+    width: 250px;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #EEEDF1;
+    background-image: linear-gradient(to bottom, #fff, #ddd);
+}
+
+.conteudo {
+    margin-left: 250px;
+    height: 100%;
+    width: 100%;
+}
+
+.esquerda {
+    margin-left: 2px;
+    margin-top: 2px;
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+    background-color: #EEEDF1;
+}
+
+.dashleft ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: white;
+}
+
+.dashleft ul li {
+    background-color: #3C8DE9;
+    margin-bottom: 1px;
+}
+
+.dashleft ul li a {
+    color: white;
+    padding: 5px 15px;
+    display: block;
+}
+
+.dashleft ul li:hover a {
+    background-color: #0068C1;
+    text-decoration: none;
+}
+
+.dashleft ul li a.active {
+    background-color: #0068C1;
+}

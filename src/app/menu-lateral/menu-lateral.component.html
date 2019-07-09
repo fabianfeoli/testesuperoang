@@ -1,0 +1,17 @@
+<div class="divhome">
+    <mat-sidenav-container class="esquerda">
+        <h1>teste</h1>
+        <mat-sidenav mode="side" opened class="sidenav">
+            <div class="dashleft">
+                <ul>
+                    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Painel</a></li>
+                    <li><a routerLink="/mytasks" routerLinkActive="active">Minhas tarefas</a></li>
+                    <li><a routerLink="/formtarefa/add/0" routerLinkActive="active">Adicionar tarefa</a></li>
+                </ul>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content class="conteudo">
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

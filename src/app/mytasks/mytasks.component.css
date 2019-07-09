@@ -1,0 +1,146 @@
+.matcard {
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 1px;
+    margin-right: 3px;
+}
+
+.cardheader {
+    background-color: #B6C6E6;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+.headerbutton {
+    position: absolute;
+    background-color: #B6C6E6;
+    top: 2px;
+    height: 18px;
+    width: 18px;
+    padding: 0;
+}
+
+.addbutton {
+    right: 0px;
+}
+
+.reloadbutton {
+    right: 40px;
+}
+
+.cardcontent {
+    margin: 0px;
+    padding: 0px;
+}
+
+.matheader {
+    background-color: #E4E4EC;
+    height: 35px;
+    line-height: 35px;
+    display: inline-flex;
+    border-right-style: solid;
+    border-right-color: #B6C6E6;
+    border-right-width: 1px;
+    padding-left: 12px;
+}
+
+tr.mat-header-row {
+    height: 35px;
+}
+
+th.mat-header-cell {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: -1px;
+}
+
+.mat-cell {
+    padding-top: 5px;
+    border-right: 1px;
+    padding-left: 12px;
+}
+
+.col-id {
+    height: 30px;
+    width: 10%;
+    display: inline-flex;
+}
+
+.col-titulo {
+    height: 30px;
+    width: 30%;
+    display: inline-flex;
+}
+
+.col-data {
+    height: 30px;
+    width: 15%;
+    display: inline-flex;
+}
+
+.col-status {
+    height: 30px;
+    width: 12%;
+    display: inline-flex;
+}
+
+.col-act {
+    height: 30px;
+    width: 20%;
+    display: inline-flex;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #B6C6E6;
+}
+
+.col-act2 {
+    width: 20%;
+    display: inline-flex;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #E4E4EC;
+}
+
+.mat-icon {
+    height: 18px;
+    width: 18px;
+    font-size: 20px;
+    color: black;
+}
+
+.mat-button {
+    line-height: 30px;
+}
+
+tr.mat-footer-row,
+tr.mat-row {
+    height: 0px;
+}
+
+.dttable {
+    width: 100%;
+}
+
+.filtro {
+    padding-top: 1px;
+    font-size: 14px;
+    height: 35px;
+}
+
+.inputfiltro {
+    margin-left: 8px;
+    width: 25%;
+}

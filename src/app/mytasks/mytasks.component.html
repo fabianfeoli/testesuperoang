@@ -1,0 +1,58 @@
+<mat-card mat-elevation-z8 class="matcard">
+    <mat-card-header class="cardheader">
+        <div class="filtro">
+            <span>Buscar título:</span>
+            <input class="inputfiltro" style="width: 200px;" placeholder="(Todos)" (keyup)="applyFilter($event.target.value)" (focus)="setupFilter('nome')" />
+        </div>
+
+    </mat-card-header>
+    <mat-card-content>
+        <div class="cardcontent">
+            <div class="carregando" *ngIf="isLoadingResults">
+                <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+            </div>
+
+            <div>
+                <table mat-table [dataSource]="dataSource" class="dttable" matSort>
+
+                    <ng-container class="coluna" matColumnDef="id">
+                        <th mat-header-cell class="matheader col-id" *matHeaderCellDef mat-sort-header>Id</th>
+                        <td mat-cell class="col-id" *matCellDef="let row">{{row.id}}</td>
+                    </ng-container>
+
+                    <ng-container class="coluna" matColumnDef="tituloTarefa">
+                        <th mat-header-cell class="matheader col-titulo" *matHeaderCellDef mat-sort-header>Título</th>
+                        <td mat-cell class="col-titulo" *matCellDef="let row">{{row.tituloTarefa}}</td>
+                    </ng-container>
+
+                    <ng-container class="coluna" matColumnDef="dtCriacaoTarefa">
+                        <th mat-header-cell class="matheader col-data" *matHeaderCellDef mat-sort-header>Criada em</th>
+                        <td mat-cell class="col-data" *matCellDef="let row">{{row.dtCriacaoTarefa | date: 'dd/MM/yyyy'}}</td>
+                    </ng-container>
+
+                    <ng-container class="coluna" matColumnDef="statusTarefa">
+                        <th mat-header-cell class="matheader col-status" *matHeaderCellDef mat-sort-header>Status</th>
+                        <td mat-cell class="col-status" *matCellDef="let row">{{dsStatusTarefa(row.statusTarefa)}}</td>
+                    </ng-container>
+
+                    <ng-container class="coluna" matColumnDef="actions">
+                        <mat-header-cell class="matheader col-act" *matHeaderCellDef>Ações</mat-header-cell>
+                        <mat-cell class="col-act2" *matCellDef="let row">
+                            <button mat-button [routerLink]="[ '/formtarefa', 'edit', row.id]">
+                                <mat-icon class="botao">edit</mat-icon>
+                            </button>
+                            <button mat-button [routerLink]="[ '/formtarefa', 'delete', row.id]">
+                                <mat-icon class="botao">delete</mat-icon>
+                            </button>
+                        </mat-cell>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row class="linha" *matRowDef="let row; columns: displayedColumns;">
+                    </tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,75 @@
+<mat-card mat-elevation-z8 class="matcard">
+    <mat-card-header>
+        <h4>{{title}}</h4>
+        <a class="botao-voltar" mat-flat-button matTooltip="Retornar para a lista" color="primary" [routerLink]="['/admin/especialidade']">
+            <mat-icon class="icon">list</mat-icon>
+        </a>
+    </mat-card-header>
+
+    <div class="example-container mat-elevation-z8">
+        <div class="carregando" *ngIf="isLoadingResults">
+            <div class="overlay" *ngIf="isLoadingResults">
+                <div class="spinner-wrapper">
+                    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+                </div>
+            </div>
+        </div>
+
+        <mat-card class="example-card">
+            <form [formGroup]="this.thisForm" (ngSubmit)="onFormSubmit(thisForm.value)">
+                <mat-form-field class="id">
+                    <input matInput id="id" placeholder="Id" formControlName="id" [errorStateMatcher]="matcher">
+                    <mat-error>
+                        <span *ngIf="!thisForm.get('id').valid && thisForm.get('id').touched">Id</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="titulo">
+                    <input matInput placeholder="Título" formControlName="titulo" [errorStateMatcher]="matcher">
+                    <mat-error>
+                        <span *ngIf="!thisForm.get('titulo').valid && thisForm.get('titulo').touched">Informe o título da
+              tarefa</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="descricao">
+                    <input matInput placeholder="Descrição" formControlName="descricao" [errorStateMatcher]="matcher">
+                    <mat-error>
+                        <span *ngIf="!thisForm.get('descricao').valid && thisForm.get('descricao').touched">Informe a descricao da
+                  tarefa</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="situacaoTarefa">
+                    <mat-select formControlName="situacaoTarefa" placeholder="Situação">
+                        <mat-option [value]="1">Criada</mat-option>
+                        <mat-option [value]="2">Em andamento</mat-option>
+                        <mat-option [value]="3">Pausada</mat-option>
+                        <mat-option [value]="4">concluída</mat-option>
+                        <mat-option [value]="5">Excluída</mat-option>
+                        <mat-option [value]="6">Cancelada</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="dtDeadline">
+                    <input matInput [matDatepicker]="picker" placeholder="Data de vencimento" formControlName="dtDeadline">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error>
+                        <span *ngIf="!thisForm.get('dtDeadline').valid && thisForm.get('dtDeadline').touched">Informe a data de vencimento da
+                      tarefa</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="button-row">
+                    <button type="submit" [disabled]="!(thisForm.valid || (this.formAction == 'delete'))" mat-flat-button color="primary">
+            <mat-icon>save</mat-icon>
+          </button>
+                    <button type="close" mat-flat-button color="warn">
+            <mat-icon>cancel</mat-icon>
+          </button>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+</mat-card>
