@@ -18,14 +18,14 @@
         <mat-card class="example-card">
             <form [formGroup]="this.thisForm" (ngSubmit)="onFormSubmit(thisForm.value)">
                 <mat-form-field class="id">
-                    <input matInput id="id" placeholder="Id" formControlName="id" [errorStateMatcher]="matcher">
+                    <input matInput id="id" placeholder="Id" formControlName="id">
                     <mat-error>
                         <span *ngIf="!thisForm.get('id').valid && thisForm.get('id').touched">Id</span>
                     </mat-error>
                 </mat-form-field>
 
                 <mat-form-field class="titulo">
-                    <input matInput placeholder="Título" formControlName="titulo" [errorStateMatcher]="matcher">
+                    <input matInput placeholder="Título" formControlName="titulo">
                     <mat-error>
                         <span *ngIf="!thisForm.get('titulo').valid && thisForm.get('titulo').touched">Informe o título da
               tarefa</span>
@@ -33,7 +33,7 @@
                 </mat-form-field>
 
                 <mat-form-field class="descricao">
-                    <input matInput placeholder="Descrição" formControlName="descricao" [errorStateMatcher]="matcher">
+                    <input matInput placeholder="Descrição" formControlName="descricao">
                     <mat-error>
                         <span *ngIf="!thisForm.get('descricao').valid && thisForm.get('descricao').touched">Informe a descricao da
                   tarefa</span>
